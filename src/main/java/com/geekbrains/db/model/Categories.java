@@ -1,5 +1,9 @@
 package com.geekbrains.db.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+
 public class Categories {
     /**
      *

@@ -1,5 +1,9 @@
 package com.geekbrains.db.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+
 public class Products {
     /**
      *
@@ -54,11 +58,12 @@ public class Products {
      * This method sets the value of the database column products.id
      *
      * @param id the value for products.id
-     *
+     * @return
      * @mbg.generated Tue Sep 13 01:35:15 AMT 2022
      */
-    public void setId(Long id) {
+    public String setId(Long id) {
         this.id = id;
+        return null;
     }
 
     /**

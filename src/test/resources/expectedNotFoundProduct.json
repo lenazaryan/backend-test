@@ -1,0 +1,5 @@
+{
+  "status": 404,
+  "message": "Unable to find product with id: 4444",
+  "timestamp": "${json-unit.ignore}"
+}

@@ -1,13 +1,9 @@
 package com.geekbrains.builder;
-import api.request.AddToShoppingListRequest;
-import api.response.ApiSearchResults;
-import api.request.ApiUserConnectRequest;
-import api.response.ApiUserConnectResult;
-import api.SpoonacularService;
-import api.response.shoppinglist.ShoppingListResponse;
 import com.geekbrains.db.dao.CategoriesMapper;
 import com.geekbrains.db.dao.ProductsMapper;
 import com.geekbrains.db.model.Categories;
+import com.geekbrains.db.model.MinimarketService;
+import com.geekbrains.db.model.ObjectResponse;
 import com.geekbrains.db.model.Products;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -73,7 +69,9 @@ public class Main {
             System.out.println(product);
             Categories category = categoriesMapper.selectByPrimaryKey(product.getCategoryId());
             System.out.println(category);
-
+            MinimarketService service2 = new MinimarketService();
+            ObjectResponse object2 = service2.createProduct();
+            System.out.println(object2);
         }
     }
 }
